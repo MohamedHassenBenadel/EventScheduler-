@@ -1,0 +1,51 @@
+/* footer.component.css */
+.footer {
+    background-color: #283746; /* Background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding around the footer */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo/description and social icons */
+    align-items: center; /* Center items vertically */
+}
+
+.footer-content {
+    display: flex; /* Flexbox for the content */
+    justify-content: space-between; /* Space between logo-description and social icons */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width for the content */
+    margin: 0 auto; /* Center content horizontally */
+}
+
+.logo-description-container {
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column; /* Stack logo and description vertically */
+    align-items: flex-start; /* Align items to the left */
+    max-width: 60%; /* Set a max width for the container */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+    width: 200px; /* Adjust logo width */
+}
+
+.description {
+    text-align: left; /* Align text to the left */
+    margin-top: 10px; /* Space between logo and description */
+    max-width: 250px; /* Set a max width for the description */
+    line-height: 1.5; /* Improve readability */
+}
+
+.socials {
+    display: flex; /* Flexbox for social icons */
+    gap: 15px; /* Space between icons */
+}
+
+.social-icon {
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icon:hover {
+    color: #FF0B7A; /* Change color on hover */
+}

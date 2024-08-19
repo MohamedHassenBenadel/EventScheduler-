@@ -1,0 +1,128 @@
+<!-- Slider Container -->
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide" *ngFor="let slide of slides; let i = index">
+            <img [src]="slide.image" alt="Slide {{i + 1}}">
+            <div class="text-overlay">
+                <h2>{{slide.title}}</h2>
+                <p>{{slide.subtitle}}</p>
+                <button class="get-started-button">Get Started</button> <!-- Added button -->
+            </div>
+        </div>
+    </div>
+    <button class="prev" (click)="prevSlide()">&#10094;</button>
+    <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>
+
+<!-- Search Bar Container -->
+<div class="search-bar-container">
+    <div class="search-bar">
+        <div class="search-field-container">
+            <i class="fa fa-search icon"></i>
+            <input type="text" placeholder="Name" class="search-field">
+        </div>
+        <div class="search-field-container">
+            <i class="fa fa-map-marker-alt icon"></i>
+            <input type="text" placeholder="Event Location" class="search-field">
+        </div>
+        <div class="search-field-container dropdown">
+            <i class="fa fa-tags icon"></i>
+            <select class="search-field" (change)="onCategoryChange($event)">
+                <option value="" disabled selected>Event Category</option>
+                <option value="education">Education & Training</option>
+                <option value="health">Health & Wellness</option>
+                <option value="travel">Travel & Exploration</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+        <button class="search-button">Search Now</button>
+    </div>
+</div>
+
+<!-- Title under the search bar -->
+<div class="cards-title">Browse Events by Category</div>
+
+<!-- Cards Container -->
+<div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <img src="assets/CategoryImages/Education.jpg" alt="Education & Training">
+        <div class="card-content">
+            <h3>Education & Training</h3>
+            <p>25 Events</p>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+        <img src="assets/CategoryImages/Health.jpg" alt="Health & Wellness">
+        <div class="card-content">
+            <h3>Health & Wellness</h3>
+            <p>18 Events</p>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+        <img src="assets/CategoryImages/Travel.jpg" alt="Travel & Exploration">
+        <div class="card-content">
+            <h3>Travel & Exploration</h3>
+            <p>12 Events</p>
+        </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+        <img src="assets/CategoryImages/Sport.jpg" alt="Sports">
+        <div class="card-content">
+            <h3>Sports</h3>
+            <p>30 Events</p>
+        </div>
+    </div>
+</div>
+
+<!-- Upcoming Events Section -->
+<div class="upcoming-events-section">
+    <div class="upcoming-events-title">Upcoming Events</div>
+    <div class="upcoming-events-container">
+        <!-- Event 1 -->
+        <div class="event-card">
+            <img src="assets/UpcomingEvents/Event1.png" alt="Event 1">
+            <div class="event-category">Health & Wellness</div>
+            <div class="event-details">
+                <h3>Balanced Life: Health & Wellness Retreat</h3>
+                <div class="event-footer">
+                    <span class="event-date">
+                        <i class="fa fa-calendar-alt"></i> August 25, 2024
+                    </span>
+                    <button class="attend-button">Attend</button>
+                </div>
+            </div>
+        </div>
+        <!-- Event 2 -->
+        <div class="event-card">
+            <img src="assets/UpcomingEvents/Event2.png" alt="Event 2">
+            <div class="event-category">Education & Training</div>
+            <div class="event-details">
+                <h3>Inspire & Innovate: Training and Learning Forum</h3>
+                <div class="event-footer">
+                    <span class="event-date">
+                        <i class="fa fa-calendar-alt"></i> August 30, 2024
+                    </span>
+                    <button class="attend-button">Attend</button>
+                </div>
+            </div>
+        </div>
+        <!-- Event 3 -->
+        <div class="event-card">
+            <img src="assets/UpcomingEvents/Event3.png" alt="Event 3">
+            <div class="event-category">Education & Training</div>
+            <div class="event-details">
+                <h3>Unlock Potential: Skills & Learning Conference</h3>
+                <div class="event-footer">
+                    <span class="event-date">
+                        <i class="fa fa-calendar-alt"></i> September 5, 2024
+                    </span>
+                    <button class="attend-button">Attend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

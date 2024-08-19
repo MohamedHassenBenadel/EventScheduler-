@@ -1,0 +1,322 @@
+/* Slider Container Styles */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 140px;
+    transform: translateY(-50%); /* Center vertically */
+    color: white;
+    padding: 20px; /* Increased padding for more space */
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: flex-start; /* Align items to the left */
+    max-width: 80%; /* Optional: Limit the width of the overlay */
+}
+
+.text-overlay h2 {
+    font-size: 4rem; /* Adjust the title size */
+    margin-bottom: 2rem;
+}
+
+.text-overlay p {
+    font-size: 1.2rem; /* Adjust the text size */
+    margin: 0;
+}
+.get-started-button {
+    background-color: #00a1a1; /* Button color */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+    font-size: 1rem; /* Font size */
+}
+
+.get-started-button:hover {
+    background-color: #e6006c; /* Darker shade on hover */
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.search-bar-container {
+    position: absolute;
+    top: 35rem; /* Adjust this value to move the search bar down from the top of the slider */
+    left: 0;
+    width: 100%;
+    padding: 20px; /* Ensure padding is appropriate */
+    box-sizing: border-box;
+    z-index: 100; /* Ensure the search bar is above other content */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Background color for the box */
+    border-radius: 5px;
+    padding: 20px; /* Increase padding to make the box taller */
+    gap: 10px; /* Space between fields and button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the search bar container */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+/* Search Field Styles */
+.search-field-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-field-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #041a57;
+}
+
+.search-field {
+    padding: 15px 30px; /* Adjust padding for comfortable input */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Set font size to 16px */
+    color: #041a57; /* Set text color */
+    font-family: 'Raleway', sans-serif; /* Use Raleway font */
+    width: 200px; /* Adjust width as needed */
+    background-color: #f2f2f2; /* Lighter background color for the field */
+    text-indent: 10px; /* Adjust this value to move placeholder to the right */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the input fields */
+}
+
+.search-field::placeholder {
+    color: #041a57; /* Set placeholder color to match dropdown color */
+    opacity: 1; /* Ensure placeholder color is fully visible */
+}
+
+/* Styles for the select dropdown */
+.search-field-container select {
+    padding: 15px 30px; /* Match padding of input fields */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Set font size to 16px */
+    color: #041a57; /* Set text color */
+    font-family: 'Raleway', sans-serif; /* Use Raleway font */
+    width: 250px; /* Adjust width as needed */
+    background-color: #f2f2f2; /* Lighter background color for the field */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the select dropdown */
+}
+
+/* Dropdown-specific styles */
+.search-field-container .dropdown {
+    position: relative;
+}
+
+.search-field-container select option {
+    padding: 10px; /* Padding for dropdown options */
+}
+
+.search-button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0B7A;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #e6006c; /* Optional: Darker shade on hover */
+}
+
+/* Title under the search bar */
+.cards-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 70px ; /* Space above and below the title */
+    margin-bottom: 20px ;
+    color: #041a57; /* Title color */
+    background-color: #ffffff; /* Background color for the title area */
+    padding: 20px 0; /* Add padding above and below the title */
+}
+
+/* Container for the cards */
+.cards-container {
+    display: flex;
+    justify-content: space-between; /* Distribute cards evenly */
+    gap: 20px; /* Space between cards */
+    flex-wrap: nowrap; /* No wrapping for the cards */
+    margin: 0 auto; /* Center align the container */
+    max-width: 1200px; /* Max width of the container */
+    padding: 0 20px; /* Padding on the sides */
+    background-color: white; /* Background color for the card area */
+}
+
+/* Styles for individual cards */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the cards */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    width: calc(25% - 20px); /* 4 cards in a row with spacing */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Card image */
+.card img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+/* Card content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #041a57; /* Category title color */
+}
+
+.card-content p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    color: #555; /* Number of events color */
+}
+
+
+
+
+
+
+
+/* Upcoming Events Section Styles */
+.upcoming-events-section {
+    background-color: #f8f9f9; /* Light background color */
+    padding: 40px 20px; /* Padding around the section */
+}
+
+.upcoming-events-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #041a57; /* Title color */
+}
+
+.upcoming-events-container {
+    display: flex;
+    justify-content: space-between; /* Distribute cards evenly */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 1200px; /* Max width of the container */
+    margin: 0 auto; /* Center align the container */
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the cards */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    width: calc(33.333% - 20px); /* 3 cards in a row with spacing */
+    box-sizing: border-box; /* Include padding and border in width */
+    position: relative;
+}
+
+.event-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.event-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FF0B7A;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-details h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #041a57; /* Event title color */
+}
+
+.event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.event-date {
+    font-size: 1rem;
+    color: #555; /* Date color */
+}
+
+.attend-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #FF0B7A;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid #FF0B7A; /* Add border to button */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.attend-button:hover {
+    background-color: #FF0B7A; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}

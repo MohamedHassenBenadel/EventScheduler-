@@ -1,0 +1,50 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+      <span class="toolbar-logo">
+        <!-- Replace with your logo -->
+        <img src="assets/logo.png" alt="Logo" />
+      </span>
+  
+      <span class="spacer"></span>
+  
+      <span class="toolbar-links">
+        <button mat-button>Home</button>
+        <button mat-button [matMenuTriggerFor]="eventsMenu">
+          Events
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #eventsMenu="matMenu">
+          <button mat-menu-item class="non-clickable">
+            <mat-icon>category</mat-icon>
+            Categories
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item class="event-category" (click)="selectCategory('Education & Training')">
+            <mat-icon>school</mat-icon>
+            Education & Training
+          </button>
+          <button mat-menu-item class="event-category" (click)="selectCategory('Health & Wellness')">
+            <mat-icon>health_and_safety</mat-icon>
+            Health & Wellness
+          </button>
+          <button mat-menu-item class="event-category" (click)="selectCategory('Travel & Exploration')">
+            <mat-icon>travel_explore</mat-icon>
+            Travel & Exploration
+          </button>
+          <button mat-menu-item class="event-category" (click)="selectCategory('Sports')">
+            <mat-icon>sports_soccer</mat-icon>
+            Sports
+          </button>
+        </mat-menu>
+        <button mat-button>Gallery</button>
+        <button mat-button>Contact</button>
+      </span>
+  
+      <span class="spacer"></span>
+  
+      <span class="toolbar-login">
+        <button mat-button class="login-register-button">Login/Register</button>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
