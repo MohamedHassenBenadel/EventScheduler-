@@ -1,0 +1,305 @@
+/* Banner Styles */
+.banner-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 15rem;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Layout for the Events Component */
+  .events-layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light background for the entire layout */
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  /* Left Section: Categories */
+  .categories-container {
+    width: 250px; /* Fixed width for categories */
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the container */
+    flex-shrink: 0; /* Prevent the container from shrinking */
+  }
+  
+  .categories-title {
+    font-size: 1.2rem;
+    color: #041a57;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .categories-list li {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #041a57;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .categories-list li:hover {
+    background-color: #e6f0ff; /* Light blue background on hover */
+    transform: translateX(5px); /* Subtle slide effect on hover */
+  }
+  
+  .categories-list li.active {
+    background-color: #041a57;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .category-icon {
+    margin-right: 8px;
+    font-size: 1rem; /* Adjust icon size */
+  }
+  
+  .categories-list li:hover .category-icon,
+  .categories-list li.active .category-icon {
+    color: white; /* Change icon color on hover or active */
+  }
+  
+  /* Right Section: Event Cards */
+  .events-container {
+    flex: 1; /* Take remaining space */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the container */
+    overflow-y: auto; /* Allows scrolling if content exceeds container height */
+    height: 600px; /* Fixed height for the container */
+  }
+  
+  .cards-title {
+    font-size: 1.8rem;
+    color: #041a57;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the cards */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    width: calc(33.333% - 20px); /* 3 cards in a row with spacing */
+    box-sizing: border-box; /* Include padding and border in width */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    cursor: pointer; /* Indicate clickable */
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+  }
+  
+  .event-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #041a57;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .event-details {
+    padding: 15px;
+    flex: 1; /* Allow content to expand */
+  }
+  
+  .event-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  
+  .event-date {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .attend-button {
+    padding: 5px 10px;
+    border: 2px solid #FF0B7A; /* Border color */
+    border-radius: 5px;
+    background-color: white; /* Initial background color */
+    color: #FF0B7A; /* Text color */
+    cursor: pointer;
+    font-size: 13px; /* Font size */
+    font-weight: bold; /* Font weight */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .attend-button:hover {
+    background-color: #FF0B7A; /* Background color on hover */
+    color: white; /* Text color on hover */
+  }
+  
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal is on top */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Increase max-width for more space */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for modal */
+    position: relative; /* Position for close button */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between header, details, and form */
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between image and description */
+  }
+  
+  .modal-image {
+    width: 200px; /* Fixed width for image */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .modal-description {
+    flex: 1; /* Allow description to take available space */
+  }
+  
+  .modal-description h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .modal-description p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  .modal-details {
+    padding-top: 30px;
+    gap: 10px; /* Space between location and date */
+  }
+  
+  .detail-item {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .detail-item i {
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 30px; /* Adjusted space between the name fields */
+  }
+  
+  .name-field {
+    flex: 1; /* Allow fields to take equal space */
+  }
+  
+  .name-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .name-field input {
+    width: 100%;
+    padding: 6px; /* Slightly smaller padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.875rem; /* Slightly smaller font size */
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 6px; /* Slightly smaller padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.875rem; /* Slightly smaller font size */
+  }
+  
+  .buy-tickets-button {
+    background-color: #00c1c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px; /* Slightly smaller padding */
+    cursor: pointer;
+    font-size: 0.875rem; /* Slightly smaller font size */
+  }
+  
+  .buy-tickets-button:hover {
+    background-color: #00a0a0;
+  }

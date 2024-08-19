@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventsComponent } from './events/events.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatMenuModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
 
 
   ],

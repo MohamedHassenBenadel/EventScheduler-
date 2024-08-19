@@ -1,0 +1,90 @@
+<!-- Banner Section -->
+<div class="banner-container">
+    <img src="assets/banner.jpg" alt="Events Banner" class="banner-image">
+    <div class="banner-text">List of upcoming events</div>
+  </div>
+  
+  <!-- Main Layout -->
+  <div class="events-layout">
+    <!-- Left Section: Categories -->
+    <div class="categories-container">
+      <h3 class="categories-title">Categories</h3>
+      <ul class="categories-list">
+        <li (click)="selectCategory(null)" [class.active]="selectedCategory === null">
+          <span class="category-icon">📁</span>
+          All
+        </li>
+        <li *ngFor="let category of categories" (click)="selectCategory(category)" [class.active]="selectedCategory === category">
+          <span class="category-icon">📁</span>
+          {{ category.name }}
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Right Section: Event Cards -->
+    <div class="events-container">
+      <div class="cards-title">Upcoming Events</div>
+      <div class="cards-container">
+        <div class="event-card" *ngFor="let event of filteredEvents" (click)="openModal(event)">
+          <img [src]="event.image" alt="{{ event.title }}">
+          <div class="event-category">{{ event.category }}</div>
+          <div class="event-details">
+            <h3>{{ event.title }}</h3>
+            <div class="event-footer">
+              <span class="event-date">
+                <i class="fa fa-calendar-alt"></i> {{ event.date }}
+              </span>
+              <button class="attend-button" (click)="openModal(event)">Attend</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Modal Section -->
+<div *ngIf="selectedEvent" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">×</span>
+      <div class="modal-body">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <img [src]="selectedEvent.image" alt="{{ selectedEvent.title }}" class="modal-image">
+          <div class="modal-description">
+            <h3>{{ selectedEvent.title }}</h3>
+            <p>{{ selectedEvent.description }}</p>
+          </div>
+
+          <div class="modal-details">
+            <div class="detail-item">
+              <i class="fa fa-map-marker-alt"></i> Location: {{ selectedEvent.location }}
+            </div>
+            <div class="detail-item">
+              <i class="fa fa-calendar-alt"></i> Date: {{ selectedEvent.date }}
+            </div>
+          </div>
+  
+
+        </div>
+
+
+
+        <!-- Modal Form -->
+<form (ngSubmit)="submitForm()">
+    <div class="name-fields">
+      <div class="name-field">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" [(ngModel)]="formData.firstName" name="firstName" required>
+      </div>
+      <div class="name-field">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" [(ngModel)]="formData.lastName" name="lastName" required>
+      </div>
+    </div>
+    
+    <label for="email">Email:</label>
+    <input id="email" type="email" [(ngModel)]="formData.email" name="email" required>
+    
+    <button type="submit" class="buy-tickets-button">Buy Tickets</button>
+  </form>
+  
