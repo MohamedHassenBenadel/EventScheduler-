@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  constructor(private router: Router) {}
 
-  selectCategory(category: string) {
-    // Handle the selection of the category here
-    console.log(`Selected category: ${category}`);
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+
+  navigateToEvents(category: string) {
+    this.router.navigate(['/events'], { queryParams: { category } });
   }
 }

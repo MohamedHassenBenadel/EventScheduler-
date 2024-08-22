@@ -1,139 +1,107 @@
 /* Toolbar styling */
 mat-toolbar {
-    background-color: #fff;
-    color: #2d2e32;
-    font-family: 'Poppins', sans-serif;
-    padding: 0 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
-    position: fixed;
-    z-index: 1000; /* Ensure the navbar is on top */
+  background-color: #fff;
+  color: #2d2e32;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  position: fixed;
+  z-index: 1000; /* Ensure the navbar is on top */
+}
 
-  }
-  
-  /* Logo styling */
-  .toolbar-logo {
-    width: 120px;
-    height: 30px;
-  }
-  
-  .toolbar-logo img {
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  /* Spacer to push content to the edges */
-  .spacer {
-    flex: 1;
-  }
-  
-  /* Navigation links */
-  .toolbar-links {
-    display: flex;
-    gap: 20px;
-    margin-left: 45rem;
-  }
-  
-  /* Buttons styling */
-  .toolbar-links button {
-    font-weight: bold;
-  }
-  
-  /* Login button styling */
-  .toolbar-login button {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  
-  /* Login/Register button styling */
-  .login-register-button {
-    background-color: #00c1c1;
-    color: #ffffff !important;
-    font-size: 1rem !important;
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    text-transform: uppercase;
-    padding: 10px 16px;
-    line-height: 1.5;
-    display: inline-block;
-    height: auto;
-  }
-  
-  .login-register-button:hover {
-    background-color: #00a1a1;
-  }
-  
-  /* Dropdown Menu Styling */
-  mat-menu {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Menu Item Styling */
-  mat-menu-item {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 16px;
-    cursor: pointer;
-  }
-  
-  /* Hover Effect for Menu Items */
-  mat-menu-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Divider Styling */
-  mat-divider {
-    margin: 0;
-    border-top: 1px solid #e0e0e0;
-  }
-  
-  /* Optional: Add Icons to Menu Items */
-  mat-menu-item mat-icon {
-    margin-right: 8px;
-  }
-  
-  /* Non-clickable Category Button */
-  .non-clickable {
-    pointer-events: none;
-    color: #2d2e32;
-    font-weight: bold;
-    cursor: default;
-    background: none;
-  }
-  
-  /* Ensure no hover effect */
-  .non-clickable:hover {
-    background-color: transparent;
-    color: inherit;
-  }
-  
-  /* Remove icon color change on hover */
-  .non-clickable mat-icon {
-    color: inherit;
-  }
-  
-  /* Event Category Styling */
-  .event-category {
-    color: #2d2e32;
-    font-weight: bold;
-  }
-  
-  .event-category:hover {
-    color: #FF0B7A;
-  }
-  
-  .event-category .mat-icon {
-    color: inherit;
-  }
-  
-  .event-category:hover .mat-icon {
-    color: #FF0B7A;
-  }
-  
-  body {
-    margin-top: 64px;
-  }
+/* Logo styling */
+.toolbar-logo {
+  width: 120px;
+  height: 30px;
+}
+
+.toolbar-logo img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Spacer to push content to the edges */
+.spacer {
+  flex: 1;
+}
+
+/* Navigation links */
+.toolbar-links {
+  display: flex;
+  gap: 20px;
+  margin-left: 45rem;
+}
+
+/* Buttons styling */
+.toolbar-links button {
+  font-weight: bold;
+  color: #2d2e32; /* Default text color */
+  background-color: transparent; /* Default background color */
+  border: none; /* Remove default border */
+  padding: 8px 16px; /* Adjust padding */
+  border-radius: 4px; /* Optional: Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect for buttons */
+.toolbar-links button:hover {
+  background-color: #FF0B7A; /* Change background color on hover */
+  color: #ffffff; /* Change text color on hover for better contrast */
+}
+
+/* Login button styling */
+.toolbar-login button {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Login/Register button styling */
+.login-register-button {
+  background-color: #00c1c1;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  line-height: 1.5;
+  display: inline-block;
+  height: auto;
+}
+
+.login-register-button:hover {
+  background-color: #00a1a1;
+}
+
+/* Remove Dropdown Menu Styling */
+mat-menu {
+  display: none; /* Remove the dropdown menu display */
+}
+
+/* Remove Dropdown Menu Item Styling */
+mat-menu-item {
+  display: none; /* Hide menu items */
+}
+
+/* Remove Dropdown Menu Divider Styling */
+mat-divider {
+  display: none; /* Hide menu divider */
+}
+
+/* Remove Non-clickable Category Styling */
+.non-clickable {
+  display: none; /* Remove non-clickable styling */
+}
+
+/* Remove Event Category Styling */
+.event-category {
+  display: none; /* Hide event category styles */
+}
+
+/* Optional: Ensure no extra margin */
+body {
+  margin-top: 64px;
+}
   

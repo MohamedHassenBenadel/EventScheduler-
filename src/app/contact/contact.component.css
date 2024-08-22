@@ -1,0 +1,125 @@
+.banner-container {
+    position: relative;
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover; /* Ensure the image covers the banner area */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.map-container {
+    margin: 20px auto; /* Center the map horizontally and add margin */
+    max-width: 100%; /* Ensure the map does not exceed the container width */
+    height: 400px; /* Set a fixed height for the map */
+}
+
+.map-container iframe {
+    width: 100%; /* Make the iframe take up the full width of the container */
+    height: 100%; /* Make the iframe take up the full height of the container */
+    border: 0; /* Remove default border */
+}
+
+.contact-form {
+    max-width: 800px; /* Limit the width of the form */
+    margin: 20px auto; /* Center the form horizontally and add margin */
+    padding: 20px; /* Add padding inside the form container */
+    border: 1px solid #ddd; /* Light border for the form container */
+    border-radius: 8px; /* Rounded corners for the form container */
+    background-color: #f9f9f9; /* Light background color for the form */
+}
+
+.questions-header {
+    color: #888888;
+    font-family: "Roboto", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1.4px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    text-align: center;
+}
+
+.message-header {
+    color: #3b1d82;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Space between form groups */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1; /* Allow form groups to take up available space */
+    margin-right: 10px; /* Adjust the horizontal gap between fields */
+    margin-left: 20px; /* Adjust the horizontal gap between fields */
+
+}
+
+.form-group:last-child {
+    margin-right: 10px; /* Remove right margin from the last form group in a row */
+    margin-right: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+
+.button-container {
+    text-align: center; /* Center-align the button inside this container */
+    margin-top: 20px; /* Add margin above the button container */
+}
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #FF0B7A;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid #FF0B7A; /* Add border to button */
+    font-weight: bold;
+    font-size: 13px;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+}
+
+button:hover {
+    background-color: #FF0B7A; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}

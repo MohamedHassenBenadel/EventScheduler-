@@ -8,6 +8,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,7 +20,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventsComponent } from './events/events.component';
-import { FormsModule } from '@angular/forms';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 
 @NgModule({
@@ -24,7 +31,10 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    EventsComponent
+    EventsComponent,
+    GalleryComponent,
+    ContactComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -34,14 +44,18 @@ import { FormsModule } from '@angular/forms';
     MatMenuModule,
     MatDividerModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+
 
 
   ],
   providers: [
     provideHttpClient(withFetch()), // Enable fetch
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    
   ],
   bootstrap: [AppComponent]
 })

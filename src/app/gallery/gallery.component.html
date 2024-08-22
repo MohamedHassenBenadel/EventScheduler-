@@ -1,0 +1,29 @@
+<!-- Banner Section -->
+<div class="banner-container">
+    <img src="assets/banner.jpg" alt="Events Banner" class="banner-image">
+    <div class="banner-text">Events Gallery</div>
+</div>
+
+<!-- Gallery Section -->
+<div class="gallery-container">
+    <div class="col" *ngFor="let image of paginatedImages; let i = index">
+        <img [src]="image.src" [alt]="image.alt" class="gallery-image" (click)="openModal(i)">
+    </div>
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination-controls" *ngIf="totalPages > 1">
+    <button *ngFor="let page of [].constructor(totalPages); let i = index"
+            (click)="changePage(i + 1)"
+            [class.active]="currentPage === i + 1">
+        {{ i + 1 }}
+    </button>
+</div>
+
+<!-- Modal Section -->
+<div class="modal" *ngIf="modalOpen">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img [src]="currentImage.src" class="modal-content">
+    <a class="prev" (click)="changeImage(-1)">&#10094;</a>
+    <a class="next" (click)="changeImage(1)">&#10095;</a>
+</div>
