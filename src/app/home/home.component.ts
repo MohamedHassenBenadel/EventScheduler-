@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +17,7 @@ export class HomeComponent implements AfterViewInit {
   currentIndex = 0;
   private slider: HTMLElement | null = null;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private router: Router , private renderer: Renderer2) {}
 
   ngAfterViewInit(): void {
     this.slider = document.querySelector('.slider');
@@ -45,4 +47,8 @@ export class HomeComponent implements AfterViewInit {
     const selectedCategory = target.value;
     // Implement further logic for category selection here
   }
+  goToEvents(): void {
+    this.router.navigate(['/events']);
+  }
+
 }

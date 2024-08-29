@@ -7,9 +7,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 
@@ -22,6 +23,10 @@ import { FooterComponent } from './footer/footer.component';
 import { EventsComponent } from './events/events.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
+import { DashboardComponent } from './ADMIN/dashboard/dashboard.component';
+import { AdminnavbarComponent } from './ADMIN/adminnavbar/adminnavbar.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 
@@ -34,6 +39,10 @@ import { ContactComponent } from './contact/contact.component';
     EventsComponent,
     GalleryComponent,
     ContactComponent,
+    DashboardComponent,
+    AdminnavbarComponent,
+    SignupComponent,
+    SigninComponent,
   
   ],
   imports: [
@@ -44,6 +53,8 @@ import { ContactComponent } from './contact/contact.component';
     MatMenuModule,
     MatDividerModule,
     MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,

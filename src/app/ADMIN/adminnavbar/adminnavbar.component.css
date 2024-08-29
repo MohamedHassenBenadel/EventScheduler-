@@ -1,0 +1,93 @@
+/* Toolbar styling */
+mat-toolbar {
+    background-color: #fff;
+    color: #2d2e32;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+    position: fixed;
+    z-index: 1000; /* Ensure the navbar is on top */
+    width: 100%;
+  }
+  
+  /* Logo styling */
+  .toolbar-logo {
+    width: 120px;
+    height: 30px;
+    cursor: pointer; /* Change cursor to pointer for clickable logo */
+  }
+  
+  .toolbar-logo img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Spacer to push content to the edges */
+  .spacer {
+    flex: 1;
+  }
+  
+  /* Navigation links */
+  .toolbar-links {
+    display: flex;
+    gap: 20px;
+    /* Center the links within the available space */
+    justify-content: center;
+  }
+  
+  .toolbar-links button {
+    font-weight: bold;
+    color: #2d2e32; /* Default text color */
+    background-color: transparent; /* Default background color */
+    border: none; /* Remove default border */
+    padding: 8px 16px; /* Adjust padding */
+    border-radius: 4px; /* Optional: Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color */
+  }
+  
+  /* Hover effect for buttons */
+  .toolbar-links button:hover {
+    background-color: #00c1c1; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover for better contrast */
+  }
+  
+  /* Disconnect button styling */
+  .toolbar-disconnect {
+    margin-left: auto; /* Pushes the disconnect button to the right end */
+  }
+  
+  .disconnect-button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    background-color: #dc3545; /* Red background color */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transform and box-shadow transition */
+  }
+  
+  .disconnect-button i {
+    margin-right: 8px;
+    color: #ffffff; /* Ensure icon is also white */
+  }
+  
+  .disconnect-button:hover {
+    transform: scale(1.1); /* Slightly increase size on hover for animation effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+  }
+  
+
+  .toolbar-links button.active {
+    background-color: #00c1c1; /* Same hover background color */
+    color: #ffffff; /* White text */
+  }
+  
+
+  
+  /* Optional: Ensure no extra margin */
+  body {
+    margin-top: 64px;
+  }
+  

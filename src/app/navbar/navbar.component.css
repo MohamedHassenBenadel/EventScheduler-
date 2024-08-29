@@ -13,6 +13,8 @@ mat-toolbar {
 .toolbar-logo {
   width: 120px;
   height: 30px;
+  cursor: pointer; /* Change cursor to pointer for clickable logo */
+
 }
 
 .toolbar-logo img {

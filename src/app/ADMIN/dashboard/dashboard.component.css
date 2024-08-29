@@ -1,0 +1,211 @@
+/* Layout container for sidebar and dashboard */
+.layout-container {
+  display: flex;
+  height: auto;
+  background-color: #ffffff; /* Light background for contrast */
+}
+
+/* Dashboard container for events */
+.dashboard {
+  flex-grow: 1;
+  padding: 20px;
+  padding-top: 80px; /* Ensure padding is sufficient based on the navbar height */
+}
+
+/* Dashboard container for events */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between event cards */
+  justify-content: flex-start; /* Align items to the start (left) */
+  padding: 20px;
+}
+
+/* Event card styling */
+.event-card {
+  position: relative;
+  width: 250px;
+  height: auto; /* Adjust height to fit content */
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.event-image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-info h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem; /* Increased font size for title */
+  margin: 10px 0;
+  color: #041a57; /* Updated color for title */
+}
+
+.event-info p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #2d2e32;
+}
+
+/* Add new event button */
+.add-event-card {
+  width: 250px;
+  height: 380px;
+  background-color: #ffffff;
+  border: 2px dashed #00c1c1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-event-card:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+.add-event-card i {
+  font-size: 3rem;
+  color: #00c1c1;
+}
+
+/* Event actions container */
+.event-actions {
+  display: flex;
+  gap: 20px; /* Space between icons */
+  margin-top: 10px;
+}
+
+/* Icon styling */
+.event-actions i {
+  font-size: 1.5rem; /* Adjust icon size */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Modify icon styling */
+.modify-icon {
+  color: #4caf50; /* Default green color */
+}
+
+.modify-icon:hover {
+  color: #388e3c; /* Darker green on hover */
+}
+
+/* Delete icon styling */
+.delete-icon {
+  color: #f44336; /* Default red color */
+}
+
+.delete-icon:hover {
+  color: #c62828; /* Darker red on hover */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Modal Content */
+.custom-modal {
+  width: 900px;  /* Increased width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative; /* To position the close button */
+}
+
+/* Form Group Layout */
+.form-group {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 0 0 48%; /* Two columns take up 48% each, with 4% total margin between */
+}
+
+input[type="text"],
+textarea,
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Image Preview Styles */
+.image-preview {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.preview-img {
+  max-width: 100%;
+  max-height: 300px; /* Restrict height to prevent overflow */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #00c1c1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #00b2b2;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}

@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .signin-container {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Ensure no scrolling within container */
+  }
+  
+  .picture-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa; /* Light cyan background color */
+  }
+  
+  .signin-picture {
+    width: 100%;
+    height: 100vh; /* Ensure it covers the entire height of the viewport */
+    object-fit: cover; /* Ensures the image covers the area */
+  }
+  
+  .form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #e8f5e9); /* Light green gradient background */
+    padding: 40px; /* Increased padding */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+  
+  .signin-form-container {
+    width: 100%;
+    max-width: 480px; /* Reduced max width for a more compact form */
+    margin: 0 auto;
+    margin-left: 100px; /* Added left margin to create more space on the right */
+    background: #ffffff; /* White background for the form */
+    padding: 30px 40px 30px 30px; /* Added more padding on the right */
+    border-radius: 15px; /* More rounded corners for the form */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a card-like effect */
+    transition: transform 0.2s ease; /* Reduced transition duration */
+    position: relative; /* Position relative for logo placement */
+  }
+  
+  .signin-form-container:hover {
+    transform: scale(1.01); /* Slightly smaller scale on hover */
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: -60px; /* Position logo above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; /* Corrected width */
+  }
+  
+  .logo {
+    width: 100%;
+  }
+  
+  .signin-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+    color: #004d40; /* Dark teal color for text */
+  }
+  
+  .form-field {
+    margin-bottom: 20px; /* Increased space between form fields */
+  }
+  
+  .signin-form input {
+    width: calc(100% - 20px); /* Adjust width to account for extra padding */
+    padding: 12px;
+    border: 1px solid #b2dfdb; /* Light teal border */
+    border-radius: 6px; /* Slightly rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    font-size: 16px; /* Larger font size for better readability */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Reduced transition duration */
+  }
+  
+  .signin-form input:focus {
+    border-color: #00796b; /* Darker teal color on focus */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Reduced shadow on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .signin-form button {
+    width: auto; /* Adjust width */
+    padding: 10px 20px; /* Reduced padding */
+    background-color: #00796b; /* Dark teal background color */
+    border: none;
+    color: #ffffff;
+    border-radius: 6px; /* Rounded corners for the button */
+    font-size: 16px; /* Smaller font size for the button */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Reduced transition duration */
+    display: block; /* Ensure block display for centering */
+    margin: 20px auto 0; /* Center align the button with auto margins */
+  }
+  
+  .signin-form button:hover {
+    background-color: #004d40; /* Even darker teal color on hover */
+    transform: translateY(-1px); /* Slight lift effect on hover */
+  }
+  
+  .account-section {
+    text-align: center; /* Center align the text and link */
+    margin-top: 20px; /* Space above the account section */
+  }
+  
+  .account-section p {
+    margin-bottom: 10px; /* Space between text and link */
+  }
+  
+  .login-link {
+    color: #00796b; /* Dark teal color for the link */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s ease; /* Reduced transition duration */
+  }
+  
+  .login-link:hover {
+    color: #004d40; /* Darker teal shade on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  

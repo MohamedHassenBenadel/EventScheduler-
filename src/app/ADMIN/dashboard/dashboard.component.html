@@ -1,0 +1,54 @@
+<div class="layout-container">
+  <div class="dashboard">
+    <div class="dashboard-container">
+      <div *ngFor="let event of events" class="event-card">
+        <img [src]="event.imageUrl" alt="{{ event.name }}" class="event-image">
+        <div class="event-info">
+          <h3>{{ event.name }}</h3>
+          <div class="event-actions">
+            <i class="fas fa-edit modify-icon" (click)="editEvent(event)"></i>
+            <i class="fas fa-trash delete-icon" (click)="deleteEvent(event.id)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="add-event-card" (click)="openModal()">
+        <i class="fas fa-plus-circle"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
+  <div class="modal-content custom-modal" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>{{ isEditMode ? 'Edit Event' : 'Add New Event' }}</h2>
+    <form (ngSubmit)="submitEvent()">
+      <div class="form-group">
+        <label for="name">Event Name:</label>
+        <input type="text" id="name" [(ngModel)]="newEvent.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="newEvent.description" name="description" required></textarea>
+      </div>
+      <div class="form-group row">
+        <div class="column">
+          <label for="location">Location:</label>
+          <input type="text" id="location" [(ngModel)]="newEvent.location" name="location" required>
+        </div>
+        <div class="column">
+          <label for="date">Date:</label>
+          <input type="datetime-local" id="date" [(ngModel)]="newEvent.date" name="date" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="image">Event Image:</label>
+        <input type="file" id="image" (change)="onImageSelected($event)">
+      </div>
+      <div class="image-preview" *ngIf="previewUrl">
+        <img [src]="previewUrl" alt="Image Preview" class="preview-img">
+      </div>
+      <button type="submit" class="btn">{{ isEditMode ? 'Update Event' : 'Add Event' }}</button>
+    </form>
+  </div>
+</div>
